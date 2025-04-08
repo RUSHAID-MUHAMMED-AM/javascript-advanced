@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function outer(){
+return function inner(){
+return "I am the inner function!"
+}
+}
+const result=outer();
+const str=result();
+console.log(str);
+        </script>
+    </body>
+</html>
