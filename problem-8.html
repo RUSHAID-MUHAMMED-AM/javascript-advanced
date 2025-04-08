@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function mathHandler(a,b,operation)
+{
+console.log("Handling math operation");
+function execute(callback)
+{
+operation(a,b);
+}
+execute(operation);  
+}
+function add(a,b)
+{
+console.log(a+b);
+}
+function multiply(a,b)
+{
+console.log(a*b);
+}
+mathHandler(6,3,add);
+mathHandler(6,3,multiply);
+        </script>
+    </body>
+</html>
