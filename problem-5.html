@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function makeMultiplier(x){
+return function inner(y){
+return x*y
+}
+}
+let result=makeMultiplier(6);
+let finalResult=result(5);
+console.log(finalResult);
+        </script>
+    </body>
+</html>
