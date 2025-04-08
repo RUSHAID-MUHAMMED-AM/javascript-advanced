@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function multiOperation(a,b,operations)
+{
+for(let op of operations){
+let result =op.func(a,b);
+console.log(`result of ${op.name} is = ${result}`);
+}
+}
+
+function add(a,b)
+{
+return a+b;
+}
+
+function multiply(a,b)
+{
+return a*b;
+}
+
+let operations=[{name:"addition",
+func:add,},
+{name:"Multiplication",
+func:multiply,},]
+ multiOperation(10,3,operations);
+        </script>
+    </body>
+</html>
