@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function mainOperation(a,b)
+{
+console.log("Main operation started");
+function perform(callback)
+{
+callback(a,b);
+}
+perform(add);
+}
+function add(a,b)
+{
+console.log(a+b);
+}
+mainOperation(5,10);
+        </script>
+    </body>
+</html>
