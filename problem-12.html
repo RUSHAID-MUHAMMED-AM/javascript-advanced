@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function checkingResult(mark)
+{
+    let passMark=50;
+    let outOfMark=100;
+   if(mark>outOfMark || mark<0){
+       console.log("Invalid Mark");
+   }
+   else if(mark>=passMark)
+   {
+       console.log("You have Passed the exam");
+       
+   }
+   else
+   {
+       console.log("You have Failed")
+   }
+   }
+   let mark=Number(prompt("Enter your mark: "));
+   checkingResult(mark);
+        </script>
+    </body>
+</html>
