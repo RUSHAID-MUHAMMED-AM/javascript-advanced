@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let operations=[{name:"addition",func:function add(a,b){
+return a+b;}},{name:"subtraction",func:function subtraction(a,b){
+ return a-b;}},{name:"multiplication",func:function multiplication(a,b){
+ return a*b;}},{name:"division",func:function division(a,b){
+ return a/b;}},]
+function multiOperation(a,b,operations)
+{
+    for(let op of operations)
+    {
+        let result=op.func(a,b);
+        console.log(`Result of ${op.name} is :${result}`);
+    }
+}
+multiOperation(10,5,operations);
+        </script>
+    </body>
+</html>
