@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+function step1(callback)
+{
+    console.log("Connecting to server...");
+    callback();
+}
+function step2(callback)
+{
+    console.log("Verifying user...");
+    callback();
+}
+function step3(callback)
+{
+    console.log("Loading dashboard...");
+    callback();
+}
+function step4()
+{
+    console.log("Welcome to your dashboard!")
+}
+
+
+step1(()=>{
+  step2(()=>{
+    step3(()=>{
+     step4();   
+    })   
+  })  
+})
+        </script>
+    </body>
+</html>
