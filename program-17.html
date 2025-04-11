@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function washClothes(powerAvailable){
+return new Promise((resolve,reject)=>{
+    if(powerAvailable){
+        setTimeout(function(){
+            resolve("Clothes are clean 🧼");
+        },2000)
+    }
+        else
+        {
+            reject("No electricity. Can't wash clothes ⚡❌"
+
+);
+        }
+})
+}
+
+washClothes(true)
+.then((result)=>console.log(result))
+.catch((Error)=>console.log(Error));
+        </script>
+    </body>
+</html>
