@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+
+
+ function WashClothes(powerAvailable){
+     return new Promise((resolve,reject)=>{
+         if(powerAvailable){
+             setTimeout(()=>{
+                 resolve("Clothes are clean 🧼");
+             },2000)
+           
+         }
+             else{
+             reject("No electricity. Can't wash clothes ⚡❌")
+             }
+     })
+ }
+ 
+ function dryClothes(){
+     return new Promise((resolve,reject)=>{
+         setTimeout(()=>{
+             resolve("Clothes are dry 🌞");
+         },1000)
+     })
+ }
+ 
+  function foldClothes(){
+     return new Promise((resolve,reject)=>{
+         setTimeout(()=>{
+             resolve("Clothes are folded and ready to wear 👕");
+         },500)
+     })
+ }
+ 
+ WashClothes(true)
+ .then((result)=>{
+     console.log(result)
+     return dryClothes()
+     })
+     .then((result)=>{
+     console.log(result)
+     return foldClothes()
+     })
+        .then((result)=>{
+     console.log(result)
+     })
+ .catch((error)=>console.log(error));
+            </script>
+        </body>
+    </head>
+</html>
