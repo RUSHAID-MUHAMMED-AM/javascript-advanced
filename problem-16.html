@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let promise=new Promise((resolve,reject)=>{
+    let num=2;
+    if(num%2==0){
+setTimeout(function(){
+    resolve("It is a Even number");
+},1000)
+    }
+    else{
+   setTimeout(function(){
+    reject("It is a Odd number");
+},1000)
+    }
+})
+
+promise
+.then((even)=>console.log(even))
+.catch((odd)=>console.log(odd));
+        </script>
+    </body>
+</html>
