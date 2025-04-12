@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function prepareBatter(ingrediantsAvailable){
+    return new Promise((resolve,reject)=>{
+    if(ingrediantsAvailable){
+        setTimeout(()=>{
+            resolve("Batter is ready 🥣")
+        },1500);
+    }
+        else{
+            reject("Missing ingredients. Can't make the cake ❌🍰")
+        }
+    })
+    
+}
+
+function bakeCake(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Cake is baked 🎂");
+        },2000)
+    })
+}
+
+function decorateCake(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        resolve("Cake is decorated 🍒");
+        },1000)
+    
+    })
+}
+
+prepareBatter(true)
+.then((result)=>{
+console.log(result);
+return bakeCake();
+})
+.then((result)=>{
+    console.log(result);
+    return decorateCake()
+})
+.then((result)=>{
+    console.log(result);
+})
+.catch((error)=>{
+    console.log(error);
+}
+)
+        </script>
+    </body>
+</html>
