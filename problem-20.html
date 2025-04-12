@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+                          setTimeout(()=>{
+                  resolve( "Food is ready!")
+              },3000)
+          }
+          else
+          {
+              reject("Missing ingredients!")
+          }
+        
+        })
+     }
+     cookFood(false)
+     .then((result)=>
+     console.log(result))
+     .catch((error)=>
+     console.log(error));
+     
+     
+     cookFood(true)
+     .then((result)=>
+     console.log(result))
+     .catch((error)=>
+     console.log(error));
+        </script>
+    </body>
+</html>
