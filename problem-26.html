@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            class Book{
+    constructor(title,author,year){
+        this.title=title;
+        this.author=author;
+        this.year=year;
+}
+getDetails(){
+    console.log(`the book ${this.title} was written by ${this.author} in ${this.year}`)
+}
+let Book1=new Book("Atomic Habits","James Clear",2018);
+Book1.getDetails();
+        </script>
+    </body>
+</html>
