@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function makeCoffee(callback){
+    setTimeout(()=>{
+    console.log("Coffee is ready!");
+    callback()
+},3000);
+}
+
+function drinkCoffee(){
+    console.log("Drinking coffee now...")
+}
+
+makeCoffee(drinkCoffee);
+        </script>
+    </body>
+</html>
