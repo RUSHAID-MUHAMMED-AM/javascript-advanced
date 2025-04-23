@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function boilWater(callbackA){
+    setTimeout(()=>{
+        console.log("Water is boiling!");
+        callbackA();
+    },2000)
+    
+}
+
+function brewTea(callbackB){
+    setTimeout(()=>{
+        console.log("Tea is brewing!");
+        callbackB();
+    },3000)
+    
+}
+function serveTea(){
+    console.log("Tea is ready! Serve it!")
+}
+boilWater(()=>{
+    brewTea(()=>{
+        serveTea();
+});
+});
+        </script>
+    </body>
+</html>
